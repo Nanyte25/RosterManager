@@ -1,0 +1,76 @@
+<template name="UploadPrivate">
+  <div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		<p id="page_text">
+			<h5>Hey developer, programming all day (and night) long?</h5><h4>Show us your tired face! :)</h4>
+		</p>
+    <p>See <a href="https://github.com/VeliovGroup/Meteor-Files">ostrio:files</a></p>
+  
+    {{> uploadForm}} {{> uploadedFiles}}
+  </div>
+  </template>
+
+  
+  <template name="uploadForm">
+    {{#with currentUpload}}
+      Uploading <b>{{file.name}}</b>: 
+      <span id="progress">{{progress.get}}%</span>
+    {{else}}
+      <input id="fileInput" type="file" />
+      <p><small>Upload file in <code>jpeg</code> or <code>png</code> format, with size less or equal to 10MB</small></p>
+      <div>{{> FS.UploadProgressBar bootstrap=true}}</div>
+    {{/with}}
+    <form role="form">
+			{{#if errorMessage}}
+			<div class="alert alert-warning">
+				{{errorMessage}}
+			</div>
+			{{/if}}
+
+			{{#if infoMessage}}
+			<div class="alert alert-success">
+				{{infoMessage}}
+			</div>
+			{{/if}}
+    <div class="form-group  field-text">
+      <label for="text">
+        Or enter a note:
+      </label>
+      <div class="input-div">
+        <textarea class="form-control " name="text"></textarea>
+        <span id="help-text" class="help-block">
+        </span>
+        <span id="error-text" class="help-block">
+        </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="submit-div">
+        <button id="form-submit-button" class="btn btn-success" type="submit">
+          <span class="fa fa-check">
+          </span>
+          Save
+        </button>
+      </div>
+    </div>
+  </form>
+  </template>
+  
+  <template name="uploadedFiles">
+    {{#if uploadedFiles.count}}
+      <ul>
+        {{#each file in uploadedFiles.each}}
+          <li>
+            <a href="{{file.link}}?download=true" download="{{file.name}}">{{file.name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <div>No files uploaded, yet</div>
+    {{/if}}
+  </template>
