@@ -1,4 +1,3 @@
 nodde_modules/
 .vscode/
-.meteor/
-.meteor-kitchen.json
+.meteor/local
