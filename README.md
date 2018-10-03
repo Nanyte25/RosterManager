@@ -1,6 +1,6 @@
 # RosterManager
 Application written in meteor js, This is a work in progress for the RHAMP Cloud Operations team. 
-[Contribution guidelines for this project](/Users/markfreer/Desktop/meteorprojects/meteortestproject/rostermanager/public)
+[RosterManager](/public/Roster Manager.png)
 
 **Table of Contents**
 
