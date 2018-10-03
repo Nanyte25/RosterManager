@@ -1,6 +1,6 @@
 # RosterManager
 Application written in meteor js, This is a work in progress for the RHAMP Cloud Operations team. 
-[RosterManager](/public/Roster Manager.png)
+[RosterManager](https://github.com/Nanyte25/RosterManager/blob/master/public/images/Roster%20Manager.png)
 
 **Table of Contents**
 
