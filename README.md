@@ -14,34 +14,31 @@ Application written in meteor js, This is a work in progress for the RHAMP Cloud
 
 ### Install meteor
 
-
 ```
 curl https://install.meteor.com/ | sh
-
 ```
 
-### Git clone the repo
+### Clone this repo
 
 ```
 git clone https://github.com/Nanyte25/RosterManager.git
-
-```
-### Install packages
-
 ```
 
-meteor npm install --save bcrypt
+### Install dependencies
 
-meteor --allow-incompatible-update
+```
+meteor npm install 
+```
 
-meteor npm install --save babel-runtime simpl-schema
+### Run application
 
+```
+meteor run
 ```
 
 ## List of installed packages
 
 ```
-
 meteor list
 accounts-base                1.4.2  A user account system
 accounts-password            1.5.1  Password support for accounts
@@ -80,6 +77,4 @@ standard-minifier-css        1.4.1  Standard css minifier used with Meteor apps 
 standard-minifier-js         2.3.2  Standard javascript minifiers used with Meteor apps by default.
 themeteorchef:bert           2.1.3  A client side, multi-style alerts system for Meteor.
 tracker                      1.1.3  Dependency tracker to allow reactive callback
-
 ```
-
